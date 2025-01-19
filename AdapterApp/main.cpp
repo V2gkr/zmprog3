@@ -1,6 +1,5 @@
 
 #include <iostream>
-
 #include "RobotControlAdapter.h"
 
 int main(){
