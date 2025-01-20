@@ -1,5 +1,6 @@
 #pragma once
 
+/**@brief: Robot Base class */
 class Robot{
   public :
   virtual ~Robot() {}
