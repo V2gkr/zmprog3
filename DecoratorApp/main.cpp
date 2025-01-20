@@ -2,14 +2,12 @@
 #include "RobotInterfaces.h"
 
 int main(){
-  // RobotMoving robotMoving;
-  // RobotShooting robotShooting;
-  // RobotCamera robotCamera;
 
-  // robotMoving.operation();
-  // robotShooting.operation();
-  // robotCamera.operation();
+  // create a robot object as a pointer to RobotSimple class
   Robot * robot = new RobotSimple;
+
+  // create a robot object as a pointer to RobotMoving class
+  //this gives as a new operation for the same type class
   Robot * movingRobot = new RobotMoving(robot);
   movingRobot->operation();
 
@@ -19,5 +17,10 @@ int main(){
   Robot * cameraRobot = new RobotCamera(robot);
   cameraRobot->operation();
 
+  delete robot;
+  delete movingRobot;
+  delete shootingRobot;
+  delete cameraRobot;
+  
   return 0;
 }
